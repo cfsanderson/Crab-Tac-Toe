@@ -11,8 +11,12 @@ const $$ = s => document.querySelectorAll(s)
 const reset = () => {
   const cells = $$('td')
   for (var i = 0; i < cells.length; i++) {
-    cells[i].textContent = 'click'
-    cells[i].dataset.player = ''
+    cells[i].textContent = ''
+    const createCellImage = document.createElement('img')
+    createCellImage.setAttribute('src', 'https://cdn4.iconfinder.com/data/icons/simplicity-vector-icon-set/512/click.png')
+    cells[i].appendChild(createCellImage)
+    createCellImage.className = 'pointer'
+    $('h2').textContent = 'let\'s play!'
   }
 }
 window.reset = reset
@@ -27,22 +31,32 @@ const main = () => {
 // Set initial value of cells to "click me"
   const cells = $$('td')
   for (var i = 0; i < cells.length; i++) {
-    cells[i].textContent = 'click'
+    cells[i].textContent = ''
+    const createCellImage = document.createElement('img')
+    createCellImage.setAttribute('src', 'https://cdn4.iconfinder.com/data/icons/simplicity-vector-icon-set/512/click.png')
+    cells[i].appendChild(createCellImage)
+    createCellImage.className = 'pointer'
   }
 // click to change cells to X or O
   let player = 'x'
   const cellClick = $$('td')
   for (let i = 0; i < cellClick.length; i++) {
     cellClick[i].addEventListener('click', () => {
-      if (cellClick[i].textContent === 'click') {
+      if (cellClick[i].textContent === '') {
         cellClick[i].textContent = player
         if (player === 'x') {
           player = 'o'
           cellClick[i].dataset.player = 'x'
+          const createCrab = document.createElement('img')
+          createCrab.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/0/0b/Caracangrejo.png')
+          cellClick[i].appendChild(createCrab)
           checkWin()
         } else {
           player = 'x'
           cellClick[i].dataset.player = 'o'
+          const createGull = document.createElement('img')
+          createGull.setAttribute('src', 'http://vignette2.wikia.nocookie.net/hijotee827/images/9/9a/Seagull.png/revision/latest?cb=20140609233049')
+          cellClick[i].appendChild(createGull)
           checkWin()
         }
       }
@@ -53,60 +67,68 @@ const main = () => {
 }
 
 const checkWin = () => {
-  console.log('check win working')
   if ($$('td.p0[data-player=x]').length === 3) {
-    console.log('player X wins!')
+    $('h2.message').textContent = 'the crabs win!'
   }
   if ($$('td.p1[data-player=x]').length === 3) {
-    console.log('player X wins!')
+    $('h2.message').textContent = 'the crabs win!'
   }
   if ($$('td.p2[data-player=x]').length === 3) {
-    console.log('player X wins!')
+    $('h2.message').textContent = 'the crabs win!'
   }
   if ($$('td.p3[data-player=x]').length === 3) {
-    console.log('player X wins!')
+    $('h2.message').textContent = 'the crabs win!'
   }
   if ($$('td.p4[data-player=x]').length === 3) {
-    console.log('player X wins!')
+    $('h2.message').textContent = 'the crabs win!'
   }
   if ($$('td.p5[data-player=x]').length === 3) {
-    console.log('player X wins!')
+    $('h2.message').textContent = 'the crabs win!'
   }
   if ($$('td.p6[data-player=x]').length === 3) {
-    console.log('player X wins!')
+    $('h2.message').textContent = 'the crabs win!'
   }
   if ($$('td.p7[data-player=x]').length === 3) {
-    console.log('player X wins!')
+    $('h2.message').textContent = 'the crabs win!'
   }
   if ($$('td.p8[data-player=x]').length === 3) {
-    console.log('player X wins!')
+    $('h2.message').textContent = 'the crabs win!'
   }
   if ($$('td.p0[data-player=o]').length === 3) {
-    console.log('player O wins!')
+    console.log('the seagulls win!')
+    $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p1[data-player=o]').length === 3) {
-    console.log('player O wins!')
+    console.log('the seagulls win!')
+    $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p2[data-player=o]').length === 3) {
-    console.log('player O wins!')
+    console.log('the seagulls win!')
+    $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p3[data-player=o]').length === 3) {
-    console.log('player O wins!')
+    console.log('the seagulls win!')
+    $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p4[data-player=o]').length === 3) {
-    console.log('player O wins!')
+    console.log('the seagulls win!')
+    $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p5[data-player=o]').length === 3) {
-    console.log('player O wins!')
+    console.log('the seagulls win!')
+    $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p6[data-player=o]').length === 3) {
-    console.log('player O wins!')
+    console.log('the seagulls win!')
+    $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p7[data-player=o]').length === 3) {
-    console.log('player O wins!')
+    console.log('the seagulls win!')
+    $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p8[data-player=o]').length === 3) {
-    console.log('player O wins!')
+    console.log('the seagulls win!')
+    $('h2.message').textContent = 'the seagulls win!'
   }
 }
 
