@@ -1,9 +1,11 @@
-@import 'utility'
+@import 'utility';
 // @include font-smoothing(on);
 
 $base-text-size: 16px;
 $base-font-family: 'Raleway', sans-serif;
-$tic-tac-toe-font: 'Indie Flower', cursive;
+$tic-tac-toe-font: 'Gloria Hallelujah', cursive;
+$background-color: hsla(270, 6%, 12%, 1);
+$base-font-color: hsla(187, 68%, 47%, 1);
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Raleway', sans-serif;
 // font-family: 'Indie Flower', cursive;
@@ -17,7 +19,12 @@ html {
 
 body {
   margin: 0;
-  font: $base-text-size / 1 $base-font-family;
+  background-image: url('http://weknowyourdreams.com/images/sand/sand-04.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  color: lighten($base-font-color, 40%);
+  font-variant-caps: small-caps;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -25,10 +32,41 @@ body {
 
   h1 {
     font-family: $base-font-family;
+    color: darken($base-font-color, 20%);
+    font-size: 2em;
   }
 
   table {
-    border: solid 1px black;
     font-family: $tic-tac-toe-font;
+
+    td {
+      width: 120px;
+      height: 100px;
+      font-size: 2em;
+      // border: solid 1px $background-color;
+      text-align: center;
+      background-color: hsla(187, 93%, 68%, 0.75);
+      color: darken($base-font-color, 20%);
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    // &[data-player=x] {
+    //   background-color: red;
+    // }
+    //
+    // &[data-player=0] {
+    //   background-color: blue;
+    // }
+  }
+
+  p {
+    color: hsl(0, 100%, 43%);
+    font-size: 2em;
+    font-family: cursive;
+    font-variant-caps: normal;
   }
 }

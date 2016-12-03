@@ -3,27 +3,29 @@
 <head lang="en">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <!-- <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah|Indie+Flower|Montserrat|Raleway" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah|Indie+Flower|Montserrat|Raleway" rel="stylesheet">
   <title>Tic Tac Toe</title>
 </head>
 <body>
   <h1>Tic Tac Toe</h1>
   <table class='gameBoard'>
     <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
+      <td class='p0 p3 p6' data-player><img src="/Users/calebsanderson/tiy/week-3/day-4/tic-tac-toe/src/index.html" alt="">X</td>
+      <td class='p0 p4' data-player>X</td>
+      <td class='p0 p5 p7' data-player>X</td>
     </tr>
     <tr>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
+      <td class='p1 p3' data-player>X</td>
+      <td class='p1 p4 p6 p7' data-player>X</td>
+      <td class='p1 p5' data-player>X</td>
     </tr>
     <tr>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
+      <td class='p2 p3 p7' data-player>X</td>
+      <td class='p2 p4' data-player>X</td>
+      <td class='p2 p5 p6' data-player>X</td>
     </tr>
   </table>
+  <p></p>
+  <button type="button" name="reset">RESET</button>
 </body>
 </html>
