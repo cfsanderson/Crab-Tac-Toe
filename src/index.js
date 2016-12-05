@@ -60,6 +60,7 @@ const main = () => {
   }
 
   $('button.play-again').addEventListener('click', () => { reset() })
+  $('button.reset').addEventListener('click', () => { reset() })
 }
 
 const checkWin = () => {
@@ -135,17 +136,32 @@ const checkWin = () => {
     $('h3.winner').textContent = 'the seagulls win!'
     $('body').className = 'modal'
   }
-  checkDraw()
+  if (checkDraw()) {
+    cat()
+    document.body.className = 'cat'
+  }
 }
 
 const checkDraw = () => {
   const checkCells = $$('td')
+  const allMoves = []
   for (var i = 0; i < checkCells.length; i++) {
-    if (checkCells[i].textContent !== '') {
-      console.log('cat')
-    } else {
-      console.log('dog')
-    }
+    allMoves.push(checkCells[i].textContent)
+  }
+  return allMoves.every((move) => {
+    return move !== ''
+  })
+}
+
+const cat = () => {
+  console.log('cat')
+  const cells = $$('td')
+  for (var i = 0; i < cells.length; i++) {
+    cells[i].textContent = ''
+    cells[i].dataset.player = 'empty'
+    const createCellImage = document.createElement('img')
+    createCellImage.setAttribute('src', 'http://www.mobymusic.biz/images/register/user/felix_the_cat.png')
+    cells[i].appendChild(createCellImage)
   }
 }
 

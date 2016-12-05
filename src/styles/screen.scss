@@ -39,6 +39,14 @@ body {
   border: 0;
 }
 
+button.reset {
+  display: none;
+}
+
+.cat button.reset {
+  display: block;
+}
+
 img {
   height: 70px;
   width: 70px;
@@ -122,14 +130,22 @@ p {
   text-align: center;
 }
 
+h2.reset {
+  display: none;
+}
+
+.cat h2.reset {
+  display: block;
+}
+
 h2 {
-  // color: darken($base-font-color, 20%);
-  color: hsla(0, 0%, 98%, 0.96);
-  // font-size: 1em;
+  color: darken($base-font-color, 20%);
+  // color: hsla(0, 0%, 98%, 0.96);
+  font-size: 2em;
   font-family: $tic-tac-toe-font;
   font-variant-caps: normal;
   text-align: center;
-  background-color: hsla(187, 93%, 68%, 0.75);
+  // background-color: hsla(187, 93%, 68%, 0.75);
   // padding-right: 10vw;
   // padding-left: 20vw;
   width: 40vw;
