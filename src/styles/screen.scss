@@ -22,7 +22,7 @@ body {
   background-image: url('http://weknowyourdreams.com/images/sand/sand-04.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   color: lighten($base-font-color, 40%);
   font-variant-caps: small-caps;
   display: flex;
@@ -57,7 +57,7 @@ table {
     color: hsla(185, 86%, 44%, 0);
     text-align: center;
     background-color: hsla(187, 93%, 68%, 0.75);
-    border-radius: 0.1em;
+    border-radius: 1.1em;
   }
 }
 
@@ -72,9 +72,12 @@ p {
 h2 {
   color: darken($base-font-color, 20%);
   // font-size: 1em;
-  font-family: $base-font-family;
+  font-family: $tic-tac-toe-font;
   font-variant-caps: normal;
   text-align: center;
+  background-color: hsla(187, 93%, 68%, 0.75);
+  padding-right: 10vw;
+  padding-left: 10vw;
 }
 
 button {

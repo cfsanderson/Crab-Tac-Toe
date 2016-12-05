@@ -4,14 +4,12 @@ import './styles/screen.scss'
 const $ = s => document.querySelector(s)
 const $$ = s => document.querySelectorAll(s)
 
-// "coin flip" button to see which player goes first?
-// Message to ask the player (winner of coin toss) to select a square
-
 // Start with a blank game board
 const reset = () => {
   const cells = $$('td')
   for (var i = 0; i < cells.length; i++) {
     cells[i].textContent = ''
+    cells[i].dataset.player = 'empty'
     const createCellImage = document.createElement('img')
     createCellImage.setAttribute('src', 'https://cdn4.iconfinder.com/data/icons/simplicity-vector-icon-set/512/click.png')
     cells[i].appendChild(createCellImage)
@@ -22,13 +20,11 @@ const reset = () => {
 window.reset = reset
 
 // Player clicks on a square to place their X or O on the board
-
 // Game continues till conditions for win/lose/draw are met
 // Message says player X or O wins
-// Keep track of wins/losses for X and O
 
 const main = () => {
-// Set initial value of cells to "click me"
+// Reset initial text content of cells to an empty string, change the image to the pointer finger, and reset data-player to "".
   const cells = $$('td')
   for (var i = 0; i < cells.length; i++) {
     cells[i].textContent = ''
@@ -61,6 +57,7 @@ const main = () => {
         }
       }
     })
+    // checkDraw()
   }
 
   $('button').addEventListener('click', () => { reset() })
@@ -95,40 +92,45 @@ const checkWin = () => {
     $('h2.message').textContent = 'the crabs win!'
   }
   if ($$('td.p0[data-player=o]').length === 3) {
-    console.log('the seagulls win!')
     $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p1[data-player=o]').length === 3) {
-    console.log('the seagulls win!')
     $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p2[data-player=o]').length === 3) {
-    console.log('the seagulls win!')
     $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p3[data-player=o]').length === 3) {
-    console.log('the seagulls win!')
     $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p4[data-player=o]').length === 3) {
-    console.log('the seagulls win!')
     $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p5[data-player=o]').length === 3) {
-    console.log('the seagulls win!')
     $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p6[data-player=o]').length === 3) {
-    console.log('the seagulls win!')
     $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p7[data-player=o]').length === 3) {
-    console.log('the seagulls win!')
     $('h2.message').textContent = 'the seagulls win!'
   }
   if ($$('td.p8[data-player=o]').length === 3) {
-    console.log('the seagulls win!')
     $('h2.message').textContent = 'the seagulls win!'
+  }
+  // checkDraw()
+}
+
+const checkDraw () => {
+  const checkCells = $$('td').textContent
+  for (var i = 0; i < checkCells.length; i++) {
+    if (checkCells[i] === 'x') {
+    }
+    if (checkCells[i] === 'o') {
+    }
+    else {
+      console.log('cat')
+    }
   }
 }
 
