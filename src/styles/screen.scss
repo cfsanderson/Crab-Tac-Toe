@@ -21,19 +21,22 @@ html {
 }
 
 main {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background-image: url('http://weknowyourdreams.com/images/sand/sand-04.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   color: lighten($base-font-color, 40%);
   font-variant-caps: small-caps;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+body {
+  background-image: url('http://i.imgur.com/FRnzcBL.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 img {
