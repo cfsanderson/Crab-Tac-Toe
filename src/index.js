@@ -14,7 +14,6 @@ const reset = () => {
     createCellImage.setAttribute('src', 'https://cdn4.iconfinder.com/data/icons/simplicity-vector-icon-set/512/click.png')
     cells[i].appendChild(createCellImage)
     createCellImage.className = 'pointer'
-    $('h2').textContent = 'let\'s play!'
   }
   $('body').className = 'main'
 }
