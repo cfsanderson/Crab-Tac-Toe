@@ -4,29 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah|Indie+Flower|Montserrat|Raleway" rel="stylesheet">
-  <title>Tic Tac Toe</title>
+  <title>Crab Tac Toe</title>
 </head>
 <body>
-  <h1>Tic Tac Toe</h1>
-  <p>The seagulls and crabs are fighting for control of the beach.<br>Play the game to see who wins.</p>
-  <table class='gameBoard'>
-    <tr>
-      <td class='p0 p3 p6' data-player></td>
-      <td class='p0 p4' data-player></td>
-      <td class='p0 p5 p7' data-player></td>
-    </tr>
-    <tr>
-      <td class='p1 p3' data-player></td>
-      <td class='p1 p4 p6 p7' data-player></td>
-      <td class='p1 p5' data-player></td>
-    </tr>
-    <tr>
-      <td class='p2 p3 p7' data-player></td>
-      <td class='p2 p4' data-player></td>
-      <td class='p2 p5 p6' data-player></td>
-    </tr>
-  </table>
-  <h2 class='message'>let's play!</h2>
-  <button type="button" name="reset">RESET</button>
+  <main>
+    <h1>Crab Tac Toe</h1>
+    <p>The seagulls and crabs are fighting for control of the beach.<br>Play the game to see who wins.</p>
+    <table class='gameBoard'>
+      <tr>
+        <td class='topL p0 p3 p6' data-player></td>
+        <td class='topC p0 p4' data-player></td>
+        <td class='topR p0 p5 p7' data-player></td>
+      </tr>
+      <tr>
+        <td class='midL p1 p3' data-player></td>
+        <td class='midC p1 p4 p6 p7' data-player></td>
+        <td class='midR p1 p5' data-player></td>
+      </tr>
+      <tr>
+        <td class='lowL p2 p3 p7' data-player></td>
+        <td class='lowC p2 p4' data-player></td>
+        <td class='lowR p2 p5 p6' data-player></td>
+      </tr>
+    </table>
+    <!-- <h2 class='message'>let's play!</h2>
+    <button class='reset' type="button" name="reset">reset</button> -->
+  </main>
+  <div class="overlay">
+    <div class="dialog">
+      <h3 class='winner'>!!!</h3>
+      <button class='play-again'>Play Again?</button>
+    </div>
+  </div>
 </body>
 </html>

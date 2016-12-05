@@ -16,6 +16,7 @@ const reset = () => {
     createCellImage.className = 'pointer'
     $('h2').textContent = 'let\'s play!'
   }
+  $('body').className = 'main'
 }
 window.reset = reset
 
@@ -57,82 +58,99 @@ const main = () => {
         }
       }
     })
-    // checkDraw()
   }
 
-  $('button').addEventListener('click', () => { reset() })
+  $('button.play-again').addEventListener('click', () => { reset() })
 }
 
 const checkWin = () => {
   if ($$('td.p0[data-player=x]').length === 3) {
-    $('h2.message').textContent = 'the crabs win!'
+    $('h3.winner').textContent = 'the crabs win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p1[data-player=x]').length === 3) {
-    $('h2.message').textContent = 'the crabs win!'
+    $('h3.winner').textContent = 'the crabs win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p2[data-player=x]').length === 3) {
-    $('h2.message').textContent = 'the crabs win!'
+    $('h3.winner').textContent = 'the crabs win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p3[data-player=x]').length === 3) {
-    $('h2.message').textContent = 'the crabs win!'
+    $('h3.winner').textContent = 'the crabs win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p4[data-player=x]').length === 3) {
-    $('h2.message').textContent = 'the crabs win!'
+    $('h3.winner').textContent = 'the crabs win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p5[data-player=x]').length === 3) {
-    $('h2.message').textContent = 'the crabs win!'
+    $('h3.winner').textContent = 'the crabs win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p6[data-player=x]').length === 3) {
-    $('h2.message').textContent = 'the crabs win!'
+    $('h3.winner').textContent = 'the crabs win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p7[data-player=x]').length === 3) {
-    $('h2.message').textContent = 'the crabs win!'
+    $('h3.winner').textContent = 'the crabs win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p8[data-player=x]').length === 3) {
-    $('h2.message').textContent = 'the crabs win!'
+    $('h3.winner').textContent = 'the crabs win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p0[data-player=o]').length === 3) {
-    $('h2.message').textContent = 'the seagulls win!'
+    $('h3.winner').textContent = 'the seagulls win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p1[data-player=o]').length === 3) {
-    $('h2.message').textContent = 'the seagulls win!'
+    $('h3.winner').textContent = 'the seagulls win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p2[data-player=o]').length === 3) {
-    $('h2.message').textContent = 'the seagulls win!'
+    $('h3.winner').textContent = 'the seagulls win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p3[data-player=o]').length === 3) {
-    $('h2.message').textContent = 'the seagulls win!'
+    $('h3.winner').textContent = 'the seagulls win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p4[data-player=o]').length === 3) {
-    $('h2.message').textContent = 'the seagulls win!'
+    $('h3.winner').textContent = 'the seagulls win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p5[data-player=o]').length === 3) {
-    $('h2.message').textContent = 'the seagulls win!'
+    $('h3.winner').textContent = 'the seagulls win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p6[data-player=o]').length === 3) {
-    $('h2.message').textContent = 'the seagulls win!'
+    $('h3.winner').textContent = 'the seagulls win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p7[data-player=o]').length === 3) {
-    $('h2.message').textContent = 'the seagulls win!'
+    $('h3.winner').textContent = 'the seagulls win!'
+    $('body').className = 'modal'
   }
   if ($$('td.p8[data-player=o]').length === 3) {
-    $('h2.message').textContent = 'the seagulls win!'
+    $('h3.winner').textContent = 'the seagulls win!'
+    $('body').className = 'modal'
   }
-  // checkDraw()
+  checkDraw()
 }
 
-const checkDraw () => {
-  const checkCells = $$('td').textContent
+const checkDraw = () => {
+  const checkCells = $$('td')
   for (var i = 0; i < checkCells.length; i++) {
-    if (checkCells[i] === 'x') {
-    }
-    if (checkCells[i] === 'o') {
-    }
-    else {
+    if (checkCells[i].textContent !== '') {
       console.log('cat')
+    } else {
+      console.log('dog')
     }
   }
 }
+
+$('button.play-again').addEventListener('click', () => { reset() })
 
 document.addEventListener('DOMContentLoaded', main)
 
