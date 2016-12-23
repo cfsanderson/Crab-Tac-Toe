@@ -10,7 +10,7 @@ const reset = () => {
     cells[i].textContent = ''
     cells[i].dataset.player = 'empty'
     const createCellImage = document.createElement('img')
-    createCellImage.setAttribute('src', 'https://cdn4.iconfinder.com/data/icons/simplicity-vector-icon-set/512/click.png')
+    createCellImage.setAttribute('src', 'http://i.imgur.com/TWBNKMV.png')
     cells[i].appendChild(createCellImage)
     createCellImage.className = 'pointer'
   }
@@ -23,7 +23,7 @@ const main = () => {
   for (var i = 0; i < cells.length; i++) {
     cells[i].textContent = ''
     const createCellImage = document.createElement('img')
-    createCellImage.setAttribute('src', 'https://cdn4.iconfinder.com/data/icons/simplicity-vector-icon-set/512/click.png')
+    createCellImage.setAttribute('src', 'http://i.imgur.com/TWBNKMV.png')
     cells[i].appendChild(createCellImage)
     createCellImage.className = 'pointer'
   }

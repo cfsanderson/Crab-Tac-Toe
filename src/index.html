@@ -4,12 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah|Indie+Flower|Montserrat|Raleway" rel="stylesheet">
+  <script src="https://use.fontawesome.com/22e698f4d0.js"></script>
   <title>Crab Tac Toe</title>
 </head>
 <body>
-  <main>
+  <div class='header'>
     <h1>Crab Tac Toe</h1>
     <p>The seagulls and crabs are fighting for control of the beach.<br>Play the game to see who wins.</p>
+  </div>
+  <main>
     <table class='gameBoard'>
       <tr>
         <td class='topL p0 p3 p6' data-player></td>
@@ -27,14 +30,29 @@
         <td class='lowR p2 p5 p6' data-player></td>
       </tr>
     </table>
-    <h2 class='reset'>cat?!</h2>
+    <h2 class='reset'>Cat!</h2>
     <button class='reset' type="button" name="reset">reset</button>
   </main>
   <div class="overlay">
     <div class="dialog">
       <h3 class='winner'>!!!</h3>
-      <button class='play-again'>Play Again?</button>
+      <button class='play-again'>play again?</button>
     </div>
+  </div>
+  <div class='footer'>
+    <footer>
+      <h2>Stay connected with me.</h2>
+      <div class='socials'>
+        <ul>
+          <li><a href='https://twitter.com/cfsanderson' target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a></li>
+          <li><a href='https://www.facebook.com/caleb.f.sanderson' target='_blank'><i class='fa fa-facebook' aria-hidden='true'></i></a></li>
+          <li><a href='https://www.instagram.com/cfsanderson/' target='_blank'><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
+          <li><a href='https://www.linkedin.com/in/calebsanderson' target='_blank'><i class='fa fa-linkedin' aria-hidden='true'></i></a></li>
+          <li><a href='https://github.com/cfsanderson' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a></li>
+        </ul>
+      </div>
+      <h5>Copyright &copy; 2016 Caleb Frost Sanderson. Built with <i class='fa fa-heart' aria-hidden='true'></i> at The Iron Yard</h5>
+    </footer>
   </div>
 </body>
 </html>
