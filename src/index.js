@@ -73,8 +73,7 @@ const checkWin = () => {
       ($$('td.p8[data-player=x]').length === 3)) {
     $('h3.winner').textContent = 'the crabs win!'
     $('body').className = 'modal'
-  }
-  if (($$('td.p0[data-player=o]').length === 3) ||
+  } if (($$('td.p0[data-player=o]').length === 3) ||
       ($$('td.p1[data-player=o]').length === 3) ||
       ($$('td.p2[data-player=o]').length === 3) ||
       ($$('td.p3[data-player=o]').length === 3) ||
@@ -85,8 +84,7 @@ const checkWin = () => {
       ($$('td.p8[data-player=o]').length === 3)) {
     $('h3.winner').textContent = 'the seagulls win!'
     $('body').className = 'modal'
-  }
-  if (checkDraw()) {
+  } if (checkDraw()) {
     cat()
   }
 }
