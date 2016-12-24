@@ -15,6 +15,11 @@ const reset = () => {
     createCellImage.className = 'pointer'
   }
   $('body').className = 'main'
+  if ($('.cat-image')) {
+    const parent = $('.cat-div')
+    const child = $('.cat-image')
+    parent.removeChild(child)
+  }
 }
 window.reset = reset
 
@@ -83,7 +88,6 @@ const checkWin = () => {
   }
   if (checkDraw()) {
     cat()
-    document.body.className = 'cat'
   }
 }
 
@@ -99,15 +103,13 @@ const checkDraw = () => {
 }
 
 const cat = () => {
-  console.log('cat')
-  const cells = $$('td')
-  for (var i = 0; i < cells.length; i++) {
-    cells[i].textContent = ''
-    cells[i].dataset.player = 'empty'
-    const createCellImage = document.createElement('img')
-    createCellImage.setAttribute('src', 'http://www.mobymusic.biz/images/register/user/felix_the_cat.png')
-    cells[i].appendChild(createCellImage)
-  }
+  const catDiv = $('.cat-div')
+  const createCatImage = document.createElement('img')
+  createCatImage.className = 'cat-image'
+  createCatImage.setAttribute('src', 'http://www.mobymusic.biz/images/register/user/felix_the_cat.png')
+  catDiv.appendChild(createCatImage)
+  $('h3.winner').textContent = 'Cat!'
+  $('body').className = 'modal'
 }
 
 $('button.play-again').addEventListener('click', () => { reset() })

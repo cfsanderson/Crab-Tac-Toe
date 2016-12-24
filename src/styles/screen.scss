@@ -31,7 +31,7 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  // min-height: 100%;
+  min-height: 100%;
 }
 
 // Top title header section
@@ -67,7 +67,7 @@ div.header {
     margin: 0 0 0.5em;
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 550px) {
     font-size: 1em;
     letter-spacing: 0.3em;
     padding-bottom: 1em;
@@ -270,25 +270,37 @@ h2.reset {
 // Modal
 
 .dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: hsla(187, 93%, 68%, 0.75);
   color: darken($base-font-color, 20%);
   border: none;
   border-radius: 20px;
   text-align: center;
-}
+  padding: 1em;
+  height: 300px;
+  width: 290px;
 
-.dialog h3 {
-  font-size: 2em;
-  margin: 1em;
-  color: hsla(0, 0%, 98%, 0.96);
-  text-shadow: 2px 3px 8px hsla(193, 21%, 16%, 1);
-  font-family: $tic-tac-toe-font;
-}
+  img {
+    padding-top: 2em;
+    margin: 0;
+  }
 
-.dialog button {
-  font-size: 1.25em;
-  color: darken($base-font-color, 20%);
-  // background-color: lighten($base-font-color, 50%);
+  h3 {
+    font-size: 2em;
+    padding: 0.5em;
+    color: hsla(0, 0%, 98%, 0.96);
+    text-shadow: 2px 3px 8px hsla(193, 21%, 16%, 1);
+    font-family: $tic-tac-toe-font;
+    margin: 0;
+  }
+
+  button {
+    font-size: 1.25em;
+    color: darken($base-font-color, 20%);
+  }
 }
 
 body:not(.modal) .overlay {
@@ -319,7 +331,8 @@ div.footer {
   font-family: $base-font-family;
   color: hsl(0, 0%, 100%);
   font-weight: lighter;
-  min-width: 100%;
+  width: 100%;
+  height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(lighten($base-font-color, 40%)), to(darken($base-font-color, 20%)));
   background: -webkit-linear-gradient(top, (lighten($base-font-color, 40%)), darken($base-font-color, 20%));
   background: -moz-linear-gradient(top, (lighten($base-font-color, 40%)), darken($base-font-color, 20%));
@@ -340,7 +353,6 @@ div.footer {
   ul {
     display: flex;
     justify-content: space-around;
-    // margin: -3em 10em 5em 10em;
     list-style-type: none;
     padding-left: 0;
 
