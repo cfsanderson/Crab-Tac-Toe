@@ -1,6 +1,6 @@
 # Crab-Tac-Toe
 
-![](http://i.imgur.com/UbHDARL.gif)
+![](./tic-tac-toe/images/crab-tac-toe-01.gif)
 
 My family and I eat at the Anna Maria Oyster Bar for lunch nearly every Sunday. One of our favorite things to do is play tic-tac-toe while we wait for our food. I styled this version to match the beachy theme of the restaurant. Now we play this instead of wasting napkins.
 
