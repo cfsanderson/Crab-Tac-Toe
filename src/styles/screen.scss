@@ -1,9 +1,9 @@
-@import 'utility';
+@import "utility";
 // @include font-smoothing(on);
 
 $base-text-size: 16px;
-$base-font-family: 'Raleway', sans-serif;
-$tic-tac-toe-font: 'Gloria Hallelujah', cursive;
+$base-font-family: "Raleway", sans-serif;
+$tic-tac-toe-font: "Gloria Hallelujah", cursive;
 $background-color: hsla(270, 6%, 12%, 1);
 $base-font-color: hsla(187, 68%, 47%, 1);
 
@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background-image: url('http://i.imgur.com/FRnzcBL.jpg');
+  background-image: url("http://i.imgur.com/FRnzcBL.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,11 +37,33 @@ main {
 // Top title header section
 
 div.header {
-  background: -webkit-gradient(linear, left top, left bottom, from(lighten($base-font-color, 40%)), to(hsla(187, 68%, 47%, 0.5)));
-  background: -webkit-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
-  background: -moz-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
-  background: -ms-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
-  background: -o-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(lighten($base-font-color, 40%)),
+    to(hsla(187, 68%, 47%, 0.5))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
+  background: -moz-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
+  background: -ms-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
+  background: -o-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
   width: 100%;
   text-align: center;
   font-size: 1.25em;
@@ -96,7 +118,7 @@ table.gameBoard {
   padding: 0;
   border: 0;
   border-spacing: 0; /* Removes the cell spacing via CSS */
-  border-collapse: collapse;  /* Optional - if you don't want to have double border where cells touch */
+  border-collapse: collapse; /* Optional - if you don't want to have double border where cells touch */
 
   td {
     margin: 0;
@@ -163,11 +185,33 @@ button.reset {
   height: 40px;
   margin: 1em;
   border-top: 1px solid hsla(187, 68%, 47%, 0.7);
-  background: -webkit-gradient(linear, left top, left bottom, from(lighten($base-font-color, 40%)), to(hsla(187, 68%, 47%, 0.5)));
-  background: -webkit-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
-  background: -moz-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
-  background: -ms-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
-  background: -o-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(lighten($base-font-color, 40%)),
+    to(hsla(187, 68%, 47%, 0.5))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
+  background: -moz-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
+  background: -ms-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
+  background: -o-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
   border-radius: 23px;
@@ -212,11 +256,33 @@ button.play-again {
   height: 40px;
   margin: 1em;
   border-top: 1px solid hsla(187, 68%, 47%, 0.7);
-  background: -webkit-gradient(linear, left top, left bottom, from(lighten($base-font-color, 40%)), to(hsla(187, 68%, 47%, 0.5)));
-  background: -webkit-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
-  background: -moz-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
-  background: -ms-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
-  background: -o-linear-gradient(top, (lighten($base-font-color, 40%)), hsla(187, 68%, 47%, 0.5));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(lighten($base-font-color, 40%)),
+    to(hsla(187, 68%, 47%, 0.5))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
+  background: -moz-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
+  background: -ms-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
+  background: -o-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    hsla(187, 68%, 47%, 0.5)
+  );
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
   border-radius: 23px;
@@ -333,18 +399,41 @@ div.footer {
   font-weight: lighter;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(lighten($base-font-color, 40%)), to(darken($base-font-color, 20%)));
-  background: -webkit-linear-gradient(top, (lighten($base-font-color, 40%)), darken($base-font-color, 20%));
-  background: -moz-linear-gradient(top, (lighten($base-font-color, 40%)), darken($base-font-color, 20%));
-  background: -ms-linear-gradient(top, (lighten($base-font-color, 40%)), darken($base-font-color, 20%));
-  background: -o-linear-gradient(top, (lighten($base-font-color, 40%)), darken($base-font-color, 20%));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(lighten($base-font-color, 40%)),
+    to(darken($base-font-color, 20%))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    darken($base-font-color, 20%)
+  );
+  background: -moz-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    darken($base-font-color, 20%)
+  );
+  background: -ms-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    darken($base-font-color, 20%)
+  );
+  background: -o-linear-gradient(
+    top,
+    (lighten($base-font-color, 40%)),
+    darken($base-font-color, 20%)
+  );
 
   h2 {
     text-align: center;
     font-size: 2.5em;
     font-weight: lighter;
     font-variant-caps: all-small-caps;
-    color: darken($base-font-color, 20%);
+    // color: darken($base-font-color, 20%);
+    color: #fafafa;
     font-family: $tic-tac-toe-font;
     margin: 0;
   }
