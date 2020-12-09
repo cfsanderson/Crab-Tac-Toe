@@ -1,57 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah|Indie+Flower|Montserrat|Raleway" rel="stylesheet">
-  <script src="https://use.fontawesome.com/22e698f4d0.js"></script>
-  <title>Crab Tac Toe</title>
-</head>
-<body>
-  <div class='header'>
-    <h1>Crab Tac Toe</h1>
-    <p>The seagulls and crabs are fighting for control of the beach. Play the game to see who wins.</p>
-  </div>
-  <main>
-    <table class='gameBoard'>
-      <tr>
-        <td class='topL p0 p3 p6' data-player></td>
-        <td class='topC p0 p4' data-player></td>
-        <td class='topR p0 p5 p7' data-player></td>
-      </tr>
-      <tr>
-        <td class='midL p1 p3' data-player></td>
-        <td class='midC p1 p4 p6 p7' data-player></td>
-        <td class='midR p1 p5' data-player></td>
-      </tr>
-      <tr>
-        <td class='lowL p2 p3 p7' data-player></td>
-        <td class='lowC p2 p4' data-player></td>
-        <td class='lowR p2 p5 p6' data-player></td>
-      </tr>
-    </table>
-    <div class='footer'>
-      <footer>
-        <h2>Stay connected with me.</h2>
-        <div class='socials'>
-          <ul>
-            <li><a href='https://twitter.com/cfsanderson' target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a></li>
-            <li><a href='https://www.facebook.com/caleb.f.sanderson' target='_blank'><i class='fa fa-facebook' aria-hidden='true'></i></a></li>
-            <li><a href='https://www.instagram.com/cfsanderson/' target='_blank'><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
-            <li><a href='https://www.linkedin.com/in/calebsanderson' target='_blank'><i class='fa fa-linkedin' aria-hidden='true'></i></a></li>
-            <li><a href='https://github.com/cfsanderson' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a></li>
-          </ul>
-        </div>
-        <h5>Copyright &copy; 2016 Caleb Frost Sanderson. Built with <i class='fa fa-heart' aria-hidden='true'></i> at The Iron Yard</h5>
-      </footer>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah|Indie+Flower|Montserrat|Raleway"
+      rel="stylesheet"
+    />
+    <script src="https://use.fontawesome.com/22e698f4d0.js"></script>
+    <title>Crab Tac Toe</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Crab Tac Toe</h1>
+      <p>
+        The seagulls and crabs are fighting for control of the beach. Play the
+        game to see who wins.
+      </p>
     </div>
-  </main>
-  <div class="overlay">
-    <div class="dialog">
-      <div class='cat-div'></div>
-      <h3 class='winner'>!!!</h3>
-      <button class='play-again'>play again?</button>
+    <main>
+      <table class="gameBoard">
+        <tr>
+          <td class="topL p0 p3 p6" data-player></td>
+          <td class="topC p0 p4" data-player></td>
+          <td class="topR p0 p5 p7" data-player></td>
+        </tr>
+        <tr>
+          <td class="midL p1 p3" data-player></td>
+          <td class="midC p1 p4 p6 p7" data-player></td>
+          <td class="midR p1 p5" data-player></td>
+        </tr>
+        <tr>
+          <td class="lowL p2 p3 p7" data-player></td>
+          <td class="lowC p2 p4" data-player></td>
+          <td class="lowR p2 p5 p6" data-player></td>
+        </tr>
+      </table>
+      <div class="footer">
+        <footer>
+          <h2>Stay connected</h2>
+          <div class="socials">
+            <ul>
+              <li>
+                <a href="https://twitter.com/cfsanderson" target="_blank"
+                  ><i class="fa fa-twitter" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/caleb.f.sanderson"
+                  target="_blank"
+                  ><i class="fa fa-facebook" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/cfsanderson/" target="_blank"
+                  ><i class="fa fa-instagram" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/calebsanderson"
+                  target="_blank"
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/cfsanderson" target="_blank"
+                  ><i class="fa fa-github" aria-hidden="true"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <h5>
+            Copyright &copy; 2016 Caleb Frost Sanderson. Built with
+            <i class="fa fa-heart" aria-hidden="true"></i> at The Iron Yard
+          </h5>
+        </footer>
+      </div>
+    </main>
+    <div class="overlay">
+      <div class="dialog">
+        <div class="cat-div"></div>
+        <h3 class="winner">!!!</h3>
+        <button class="play-again">play again?</button>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
