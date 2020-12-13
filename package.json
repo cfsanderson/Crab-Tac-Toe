@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "deploy": "npm run build && surge ./public --domain tic-tac-toe.cfsanderson.surge.sh",
+    "deploy": "npm run build",
     "start": "webpack-dev-server",
     "build": "rm -rf public && NODE_ENV=production webpack --optimize-minimize --progress --profile --colors"
   },
@@ -30,7 +30,6 @@
     "style-loader": "^0.13.1",
     "stylelint": "^7.6.0",
     "stylelint-config-standard": "^15.0.0",
-    "surge": "^0.18.0",
     "webpack": "^1.13.3",
     "webpack-dev-server": "^1.16.2",
     "webpack-merge": "^1.0.2",
