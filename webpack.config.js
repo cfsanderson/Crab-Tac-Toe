@@ -10,10 +10,7 @@ const SRC_PATH = path.resolve(ROOT_PATH, 'src')
 const BUILD_PATH = path.resolve(ROOT_PATH, 'public')
 
 const common = {
-  entry: [
-    'whatwg-fetch',
-    SRC_PATH
-  ],
+  entry: ['whatwg-fetch', SRC_PATH],
   output: {
     filename: 'bundle.js',
     path: BUILD_PATH,
@@ -27,32 +24,32 @@ const common = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
       }
     })
   ],
   module: {
-    loaders: [{
-      test: /\.js$/,
-      include: [SRC_PATH],
-      loader: 'babel'
-    }, {
-      test: /\.(png|jpe?g|gif|svg)$/,
-      loader: 'file'
-    }, {
-      test: /\.(sass|s?css)$/,
-      loaders: [
-        'style',
-        'css',
-        'postcss',
-        'sass'
-      ]
-    }]
+    loaders: [
+      {
+        test: /\.js$/,
+        include: [SRC_PATH],
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        loader: 'file'
+      },
+      {
+        test: /\.(sass|s?css)$/,
+        loaders: ['style', 'css', 'postcss', 'sass']
+      }
+    ]
   },
   postcss: () => {
-    return [
-      require('autoprefixer')
-    ]
+    return [require('autoprefixer')]
   }
 }
 
@@ -72,13 +69,18 @@ const development = {
   plugins: [
     new webpack.HotModuleReplacementPlugin({ multiStep: true }),
     new webpack.SourceMapDevToolPlugin(),
-    new BrowserSyncPlugin({ proxy: 'http://localhost:8080/' }, { reload: false })
+    new BrowserSyncPlugin(
+      { proxy: 'http://localhost:8080/' },
+      { reload: false }
+    )
   ],
   module: {
-    loaders: [{
-      test: /\.html$/,
-      loader: 'raw'
-    }]
+    loaders: [
+      {
+        test: /\.html$/,
+        loader: 'raw'
+      }
+    ]
   }
 }
 
@@ -89,9 +91,9 @@ const production = {
   ]
 }
 
-module.exports = validate(merge.smart(
-  process.env.npm_lifecycle_event === 'build'
-  ? production
-  : development,
-  common
-))
+module.exports = validate(
+  merge.smart(
+    process.env.npm_lifecycle_event === 'build' ? production : development,
+    common
+  )
+)
