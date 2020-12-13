@@ -1,4 +1,4 @@
-# [Crab-Tac-Toe](http://tic-tac-toe.cfsanderson.surge.sh)
+# [Crab-Tac-Toe](https://compassionate-hawking-29c1f7.netlify.app/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3541c479-b991-488a-86c1-2c84a668c13d/deploy-status)](https://app.netlify.com/sites/compassionate-hawking-29c1f7/deploys)
 
